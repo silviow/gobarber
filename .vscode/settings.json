@@ -1,0 +1,21 @@
+{
+    "git.ignoreLimitWarning": true,
+    "[javascript]": {
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": true,
+        }
+    },
+    "[javascriptreact]": {
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslink": true 
+        }
+    },
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "eslint.alwaysShowStatus": true,
+    "eslint.workingDirectories": [
+      { "mode": "auto" }
+    ],
+}
