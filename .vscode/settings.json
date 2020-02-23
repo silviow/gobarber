@@ -7,7 +7,7 @@
     },
     "[javascriptreact]": {
         "editor.codeActionsOnSave": {
-          "source.fixAll.eslink": true 
+          "source.fixAll.eslink": true
         }
     },
     "editor.formatOnSave": false,
