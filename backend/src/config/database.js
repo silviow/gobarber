@@ -9,4 +9,7 @@ module.exports = {
         underscored: true,
         underscoredAll: true,
     },
+    mongo: {
+        url: 'mongodb://localhost:27017/gobarber',
+    },
 };
