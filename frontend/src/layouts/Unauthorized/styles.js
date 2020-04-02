@@ -31,6 +31,14 @@ export const Content = styled.div`
         display: flex;
         margin-top: 30px;
         flex-direction: column;
+
+        span {
+            color: #fff;
+            margin: 8px 0;
+            font-weight: 500;
+            text-align: left;
+            align-self: flex-start;
+        }
     }
 
     .unauthorized_btn {
