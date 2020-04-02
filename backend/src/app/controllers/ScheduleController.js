@@ -30,6 +30,13 @@ class ScheduleController {
                     ],
                 },
             },
+            include: [
+                {
+                    model: User,
+                    as: 'user',
+                    attributes: ['name'],
+                },
+            ],
             order: ['date'],
         });
 
