@@ -4,23 +4,24 @@ import PropTypes from 'prop-types';
 import { Route, Redirect } from 'react-router-dom';
 import Authenticated from '~/layouts/Authenticated';
 import Unauthorized from '~/layouts/Unauthorized';
+import { store } from '~/store';
 
 export default function RouteWrapper({
     component: Component,
     restricted,
     ...rest
 }) {
-    const signed = false;
+    const { authenticated } = store.getState().auth;
 
-    if (!signed && restricted) {
+    if (!authenticated && restricted) {
         return <Redirect to="/" />;
     }
 
-    if (signed && !restricted) {
+    if (authenticated && !restricted) {
         return <Redirect to="/dashboard" />;
     }
 
-    const Layout = signed ? Authenticated : Unauthorized;
+    const Layout = authenticated ? Authenticated : Unauthorized;
 
     return (
         <Route

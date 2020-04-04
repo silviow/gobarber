@@ -1,11 +1,12 @@
 import styled from 'styled-components';
+import { purpleGradient } from '~/styles/global';
 
 export const Wrapper = styled.div`
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to right, #673ab7, #512da8);
+    background: linear-gradient(to right, ${purpleGradient});
 
     .go_barber {
         font-size: 220px;

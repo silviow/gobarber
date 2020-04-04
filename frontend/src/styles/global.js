@@ -1,4 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
+import 'react-toastify/dist/ReactToastify.css';
+
+export const purpleGradient = '#673ab7, #512da8';
 
 export default createGlobalStyle`
     * {
@@ -82,12 +85,30 @@ export default createGlobalStyle`
 
     .white_text { color: #fff; }
 
-    .purple_gradient { background: linear-gradient(to right, #512da8, #673ab7); }
+    .purple_gradient { background: linear-gradient(to left, ${purpleGradient}); }
 
     .purple_gradient_text {
-        background: linear-gradient(to right, #512da8, #673ab7);
+        background: linear-gradient(to left, ${purpleGradient});
         background-clip: none;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+    }
+
+    .notification {
+        padding: 5px 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+
+        .Toastify__toast-body {
+            padding: 0 5px;
+        }
+    }
+
+    .info {
+        background: linear-gradient(-135deg, ${purpleGradient});
+    }
+
+    .error {
+        background: linear-gradient(135deg, #e74c3c, #bf2f22)
     }
 `;

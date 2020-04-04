@@ -1,8 +1,10 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Form, Input } from '@rocketseat/unform';
 import { FiArrowLeft } from 'react-icons/fi';
 import * as Yup from 'yup';
+import { registerRequest } from '~/store/modules/auth/actions';
 import logo from '~/assets/logo.svg';
 
 const schema = Yup.object().shape({
@@ -14,7 +16,11 @@ const schema = Yup.object().shape({
 });
 
 export default function Register() {
-    function handleSubmit(data) {}
+    const dispatch = useDispatch();
+
+    function handleSubmit({ name, email, password }) {
+        dispatch(registerRequest(name, email, password));
+    }
 
     return (
         <>

@@ -1,8 +1,10 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Form, Input } from '@rocketseat/unform';
 import { FiLogIn } from 'react-icons/fi';
 import * as Yup from 'yup';
+import { loginRequest } from '~/store/modules/auth/actions';
 import logo from '~/assets/logo.svg';
 
 const schema = Yup.object().shape({
@@ -11,7 +13,12 @@ const schema = Yup.object().shape({
 });
 
 export default function Login() {
-    function handleSubmit(data) {}
+    const dispatch = useDispatch();
+    const loading = useSelector((state) => state.auth.loading);
+
+    function handleSubmit({ email, password }) {
+        dispatch(loginRequest(email, password));
+    }
 
     return (
         <>
@@ -23,7 +30,7 @@ export default function Login() {
                     type="submit"
                     className="btn unauthorized_btn purple_gradient white_text"
                 >
-                    Login
+                    {loading ? 'Loading...' : 'Login'}
                 </button>
                 <Link to="/register" className="link_btn white_text">
                     <FiLogIn size={18} />
