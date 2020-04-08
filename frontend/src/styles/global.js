@@ -39,7 +39,7 @@ export default createGlobalStyle`
             border: 1px solid #ededed;
         }
 
-        input::placeholder, textarea::placeholder { color: #dedede; }
+        input::placeholder, textarea::placeholder { color: #cdcdcd; }
 
         input:-webkit-autofill,
         textarea:-webkit-autofill { box-shadow: 0 0 0 30px white inset !important; }
@@ -67,10 +67,12 @@ export default createGlobalStyle`
     }
 
     .link_btn {
+        border: 0;
         display: flex;
         font-size: 18px;
         margin-top: 30px;
         font-weight: 500;
+        background: none;
         align-items: center;
         text-decoration: none;
         justify-content: center;
