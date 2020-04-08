@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 import { purpleGradient } from '~/styles/global';
 
 export const Container = styled.div`
+    margin-top: 4px;
     position: relative;
 `;
 
@@ -9,34 +10,41 @@ export const Badge = styled.button`
     border: none;
     background: none;
     position: relative;
+    transition: all ease-in-out 0.3s;
+
+    &:hover {
+        transform: perspective(1px) scale(1.1);
+    }
 
     ${(props) =>
         props.hasUnread &&
         css`
             &::after {
-                top: 1px;
-                right: 1px;
+                top: 0;
+                right: 0;
                 width: 9px;
                 height: 9px;
                 content: '';
                 position: absolute;
                 background: #e74c3c;
                 border-radius: 50%;
+                border: 1.5px solid #512da8;
             }
         `}
 `;
 
 export const NotificationsList = styled.div`
-    width: 258px;
-    height: 258px;
+    width: 260px;
+    height: 260px;
     overflow-y: auto;
     padding: 17px 18px;
     position: absolute;
     border-radius: 10px;
-    top: calc(100% + 40px);
-    left: calc(50% - 129px);
+    top: calc(100% + 36px);
+    left: calc(50% - 130px);
     background: rgba(0, 0, 0, 0.16);
     box-shadow: 0 0 130px rgba(0, 0, 0, 0.08);
+    display: ${(props) => (props.visible ? 'block' : 'none')};
 
     &::-webkit-scrollbar {
         width: 8px;
@@ -74,7 +82,9 @@ export const Notification = styled.div`
     }
 
     p {
-        font-size: 15px;
+        font-size: 14.3px;
+        line-height: 18px;
+        font-family: 'Lato', sans-serif;
     }
 
     div {
@@ -92,6 +102,7 @@ export const Notification = styled.div`
     button {
         border: 0;
         display: flex;
+        margin-top: 0;
         background: none;
         margin-left: 13px;
         font-size: 13.3px;
