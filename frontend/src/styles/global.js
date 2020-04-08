@@ -76,7 +76,7 @@ export default createGlobalStyle`
         justify-content: center;
         transition: all ease-in-out 0.3s;
 
-        &:hover { transform: translateX(5px); }
+        &:hover { transform: translateX(3px); }
 
         svg { margin-right: 8px; }
     }
