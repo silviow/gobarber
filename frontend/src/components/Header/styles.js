@@ -45,7 +45,6 @@ export const Content = styled.div`
 export const Profile = styled.div`
     display: flex;
     margin-left: 20px;
-    padding-left: 20px;
 
     div {
         display: flex;
@@ -55,12 +54,25 @@ export const Profile = styled.div`
         justify-content: center;
 
         a {
+            opacity: 0.6;
+            font-size: 14px;
             margin-top: 2px;
         }
     }
 
-    img {
-        height: 48px;
-        border-radius: 50%;
+    a {
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 48px;
+            border-radius: 50%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        div {
+            display: none;
+        }
     }
 `;

@@ -35,7 +35,7 @@ export const Badge = styled.button`
 
 export const NotificationsList = styled.div`
     width: 260px;
-    height: 260px;
+    height: 254px;
     overflow-y: auto;
     padding: 17px 18px;
     position: absolute;
@@ -45,6 +45,9 @@ export const NotificationsList = styled.div`
     background: rgba(0, 0, 0, 0.16);
     box-shadow: 0 0 130px rgba(0, 0, 0, 0.08);
     display: ${(props) => (props.visible ? 'block' : 'none')};
+    /* background: linear-gradient(to right, ${purpleGradient});
+    background-color: rgba(0, 0, 0, 0.13);
+    background-blend-mode: overlay; */
 
     &::-webkit-scrollbar {
         width: 8px;
@@ -55,8 +58,8 @@ export const NotificationsList = styled.div`
     }
 
     &::-webkit-scrollbar-thumb {
-        background: linear-gradient(to top, ${purpleGradient});
         border-radius: 8px;
+        background: linear-gradient(to top, ${purpleGradient});
     }
 
     &::before {
