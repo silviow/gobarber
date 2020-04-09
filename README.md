@@ -17,12 +17,11 @@ Some technologies and tools used on this project:
 - Sentry
 - Multer
 - JWT
-- Yup
 - ESLint
 - Prettier
 - React.js
 - Redux
 - Redux Saga
-- React Toastify
+- React Native
 
 ![Login and register screens demo](login_and_register_screens_demo.jpg)
