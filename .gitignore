@@ -1,6 +1,8 @@
 backend/node_modules
 frontend/node_modules
 
+backend/tmp/uploads
+
 frontend/.pnp
 frontend/.pnp.js
 frontend/coverage

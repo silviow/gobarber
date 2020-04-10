@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Form, Input } from '@rocketseat/unform';
 import { FiPower } from 'react-icons/fi';
 import { updateProfileRequest } from '~/store/modules/user/actions';
+import AvatarInput from './AvatarInput';
 import { Container } from './styles';
 
 export default function Profile() {
@@ -16,6 +17,7 @@ export default function Profile() {
     return (
         <Container>
             <Form initialData={profile} onSubmit={handleSubmit}>
+                <AvatarInput name="avatar_id" />
                 <Input name="name" placeholder="Your name" />
                 <Input name="email" type="email" placeholder="Your email" />
                 <div className="password_related_inputs">
