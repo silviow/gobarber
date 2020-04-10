@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Form, Input } from '@rocketseat/unform';
 import { FiPower } from 'react-icons/fi';
+import { logout } from '~/store/modules/auth/actions';
 import { updateProfileRequest } from '~/store/modules/user/actions';
 import AvatarInput from './AvatarInput';
 import { Container } from './styles';
@@ -12,6 +13,10 @@ export default function Profile() {
 
     function handleSubmit(data) {
         dispatch(updateProfileRequest(data));
+    }
+
+    function handleLogout() {
+        dispatch(logout());
     }
 
     return (
@@ -41,7 +46,11 @@ export default function Profile() {
                     Update my account data
                 </button>
             </Form>
-            <button type="button" className="link_btn white_text">
+            <button
+                type="button"
+                onClick={handleLogout}
+                className="link_btn white_text"
+            >
                 <FiPower size={18} color="#fff" />
                 Logout
             </button>
