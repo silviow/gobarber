@@ -13,7 +13,11 @@ export const Container = styled.div`
 
         input {
             color: #fff;
-            background: rgba(0, 0, 0, 0.16);
+            background: rgba(0, 0, 0, 0.1);
+
+            &::placeholder {
+                color: #7159c1;
+            }
         }
 
         input + input {
