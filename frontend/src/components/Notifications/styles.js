@@ -34,14 +34,14 @@ export const Badge = styled.button`
 `;
 
 export const NotificationsList = styled.div`
-    width: 260px;
-    height: 254px;
+    width: 275px;
+    height: 250px;
     overflow-y: auto;
-    padding: 17px 18px;
+    padding: 16px 18px;
     position: absolute;
     border-radius: 10px;
     top: calc(100% + 36px);
-    left: calc(50% - 130px);
+    left: calc(50% - 137.5px);
     background: rgba(0, 0, 0, 0.16);
     box-shadow: 0 0 130px rgba(0, 0, 0, 0.08);
     display: ${(props) => (props.visible ? 'block' : 'none')};
@@ -81,7 +81,7 @@ export const Notification = styled.div`
     & + & {
         margin-top: 13px;
         padding-top: 10px;
-        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        border-top: 1px solid rgba(0, 0, 0, 0.16);
     }
 
     p {
