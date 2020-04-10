@@ -35,7 +35,7 @@ export const Badge = styled.button`
 
 export const NotificationsList = styled.div`
     width: 275px;
-    height: 250px;
+    height: 252px;
     overflow-y: auto;
     padding: 16px 18px;
     position: absolute;
