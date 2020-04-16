@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import { purpleGradient } from '~/styles/global';
 
 export const Container = styled.div`
+    padding: 30px;
     display: flex;
     max-width: 600px;
     margin: 80px auto;
-    padding: 30px;
     flex-direction: column;
 
     header {
