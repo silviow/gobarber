@@ -25,6 +25,6 @@ Some technologies and tools used on this project:
 - Redux
 - Redux Saga
 
-![Login and register screens demo](login_and_register_screens_demo.jpg)
-![Profile screen demo](profile_screen_demo.jpg)
-![Dashboard screen demo](dashboard_screen_demo.jpg)
+![Login and register demo](login_and_register_demo.jpg)
+![Dashboard demo](dashboard_demo.jpg)
+![Profile demo](profile_demo.jpg)
